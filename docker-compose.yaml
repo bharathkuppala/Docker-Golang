@@ -1,0 +1,12 @@
+version: "3.0"
+services:
+  go-app:
+    build: .
+    ports:
+      - "9000:9000"
+    depends_on:
+      - mongo
+  mongo:
+    image: "mongo"
+    ports:
+      - 27100:27017
